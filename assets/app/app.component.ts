@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { MessageService } from './messages/message.service'
+import { ErrorService } from './errors/error.service';
 
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
-    // styles: []
-    providers: [MessageService]
+    styleUrls: ['./app.component.css'],
+    providers: [MessageService, ErrorService]
 })
 export class AppComponent {
 

@@ -36,5 +36,14 @@ export class MessageComponent {
 
     onDelete() {
         this.messageService.deleteMessage(this.message)
+            .subscribe(
+                result => console.log(result),
+                error => console.error(error)
+            );
+    }
+
+    belongsToUser() {
+        // return localStorage.getItem('userId') == this.message.userId._id
+        return true
     }
 }

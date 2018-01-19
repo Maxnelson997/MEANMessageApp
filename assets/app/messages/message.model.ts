@@ -10,5 +10,4 @@ export class Message {
         this.messageId = messageId;
         this.userId = userId;
     }
-    
 }

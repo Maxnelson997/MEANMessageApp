@@ -8,11 +8,12 @@ var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
 var messageRoutes = require('./routes/messages');
+var userRoutes = require('./routes/users');
 // var appRoutes = require('./routes/user');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost:27017/node-angular', { useMongoClient: true });
+mongoose.connect('testuser:testuser@ds261917.mlab.com:61917/udemycourse', { useMongoClient: true });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,7 +35,7 @@ app.use(function (req, res, next) {
 });
 
 app.use('/message', messageRoutes);
-// app.use('/user', appRoutes);
+app.use('/users', userRoutes);
 app.use('/', appRoutes);
 
 
