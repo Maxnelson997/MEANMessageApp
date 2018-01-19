@@ -13,7 +13,10 @@ var userRoutes = require('./routes/users');
 
 var app = express();
 
+// mongoose.connect('mongodb://localhost:27017/node-angular', { useMongoClient: true });
+
 mongoose.connect('testuser:testuser@ds261917.mlab.com:61917/udemycourse', { useMongoClient: true });
+// http://git.heroku.com/udemycourse-max.com
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
