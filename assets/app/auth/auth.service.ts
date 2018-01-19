@@ -32,6 +32,7 @@ export class AuthService {
                 return Observable.throw(error.json())
             });    
     }
+    
 
     logout() {
         //clears token and user id from local storage. clears all local storage
