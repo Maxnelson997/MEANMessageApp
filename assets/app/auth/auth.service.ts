@@ -12,7 +12,7 @@ export class AuthService {
     signup(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'})
-        return this.http.post('http://localhost:3000/users', body, {headers: headers})
+        return this.http.post('https://udemycourse-max.herokuapp.com/users', body, {headers: headers})
             .map((response: Response) => {
                 return response.json()
             })
@@ -25,7 +25,7 @@ export class AuthService {
     signin(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'})
-        return this.http.post('http://localhost:3000/users/signin', body, {headers: headers})
+        return this.http.post('https://udemycourse-max.herokuapp.com/users/signin', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => {
                 this.errorService.handleError(error.json())
