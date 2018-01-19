@@ -16,7 +16,7 @@ var app = express();
 // mongoose.connect('mongodb://localhost:27017/node-angular', { useMongoClient: true });
 
 mongoose.connect('testuser:testuser@ds261917.mlab.com:61917/udemycourse', { useMongoClient: true });
-// https://udemycourse-max.herokuapp.com/
+// http://udemycourse-max.herokuapp.com/
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
